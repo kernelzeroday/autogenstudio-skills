@@ -1,6 +1,7 @@
 import os
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
+import shutil  # Add this import at the beginning of your file
 
 # Function to draw the geometric structure with customizable file name
 def draw_geometric_structure(file_name, base_circles=4, base_circle_color='blue', top_circle_color='orange', line_color='grey', line_width=2):
@@ -45,3 +46,6 @@ def draw_geometric_structure(file_name, base_circles=4, base_circle_color='blue'
 # Example usage:
 file_name = 'custom_geometric_structure'
 image_path = draw_geometric_structure(file_name, base_circles=8, base_circle_color='blue', top_circle_color='orange', line_color='grey', line_width=2)
+
+# Replace os.remove(image_path) and os.rmdir('diagrams') with:
+shutil.rmtree('diagrams')

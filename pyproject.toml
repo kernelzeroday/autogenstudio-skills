@@ -10,6 +10,8 @@ python = "^3.12"
 requests = "^2.32.3"
 duckduckgo-search = "^6.1.5"
 pytest = "^8.2.2"
+bs4 = "^0.0.2"
+matplotlib = "^3.9.0"
 
 
 [build-system]
