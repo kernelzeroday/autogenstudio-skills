@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import os
 
 def save_webpage_as_text(url, output_filename):
     # Send a GET request to the URL
@@ -25,8 +26,16 @@ output_filename = 'webpage_content.txt'
 file_path = save_webpage_as_text(url, output_filename)
 print("File saved at:", file_path)
 
+# Clean up the created file
+if os.path.exists(file_path):
+    os.remove(file_path)
+    print("File cleaned up:", file_path)
+
 # For a list of urls
 # urls = ['http://example.com', 'http://example.org']
 # for i, url in enumerate(urls):
 #     output_filename = f'webpage_content_{i}.txt'
 #     save_webpage_as_text(url, output_filename)
+#     if os.path.exists(output_filename):
+#         os.remove(output_filename)
+#         print("File cleaned up:", output_filename)
